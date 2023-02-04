@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "fdc7721f-3374-4047-986d-c6b31cf88051",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "69d3d53f-ac5a-4d0b-89c4-09e7ac7a27c0",
+						"exec": [
+							"pm.test(\"validating data\",function(){\r",
+							"    pm.response.to.have.status(200)\r",
+							"    pm.response.to.be.success});\r",
+							"\r",
+							"    pm.test(\"validating sucess\",function(){   \r",
+							"    pm.response.to.be.success});\r",
+							"\r",
+							"   "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "bf6c4f04-416e-4a2f-b3a3-3a219ea45c0f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://www.fishwatch.gov/api/species/red-snapper"
+			},
+			"response": []
+		}
+	]
+}
