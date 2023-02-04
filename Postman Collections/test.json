@@ -11,22 +11,31 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "69d3d53f-ac5a-4d0b-89c4-09e7ac7a27c0",
+						"id": "a3ad6ffc-ecca-411b-bf06-def903eaae30",
 						"exec": [
-							"pm.test(\"validating data\",function(){\r",
-							"    pm.response.to.have.status(200)\r",
-							"    pm.response.to.be.success});\r",
+							"var schema = {\r",
+							"    \"items\": {\r",
+							"        \"type\": \"boolean\"\r",
+							"    }\r",
+							"};\r",
 							"\r",
-							"    pm.test(\"validating sucess\",function(){   \r",
-							"    pm.response.to.be.success});\r",
+							"var data1 = [true, false];\r",
+							"var data2 = [true, 123];\r",
 							"\r",
-							"   "
+							"pm.test('Schema is valid', function () {\r",
+							"    pm.expect(tv4.validate(data1, schema)).to.be.true;\r",
+							"    pm.expect(tv4.validate(data2, schema)).to.be.true;\r",
+							"});\r",
+							"pm.test('Schema is valid', function () {\r",
+							"    pm.expect(tv4.validate(data1, schema)).to.be.true;\r",
+							"    pm.expect(tv4.validate(data2, schema)).to.be.true;\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
 				}
 			],
-			"_postman_id": "bf6c4f04-416e-4a2f-b3a3-3a219ea45c0f",
+			"id": "bf6c4f04-416e-4a2f-b3a3-3a219ea45c0f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
