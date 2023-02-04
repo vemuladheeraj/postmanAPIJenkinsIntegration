@@ -39,6 +39,11 @@
 							"pm.test('Schema is valid', function () {\r",
 							"    pm.expect(tv4.validate(data1, schema)).to.be.true;\r",
 							"    pm.expect(tv4.validate(data2, schema)).to.be.true;\r",
+							"});\r",
+							"\r",
+							"pm.test('Schema is valid', function () {\r",
+							"    pm.expect(tv4.validate(data1, schema)).to.be.true;\r",
+							"    pm.expect(tv4.validate(data2, schema)).to.be.true;\r",
 							"});"
 						],
 						"type": "text/javascript"
